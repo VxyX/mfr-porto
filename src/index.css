@@ -6,11 +6,20 @@
     --theme-dark: #0e031b;
     --theme-white: #dbdbdb;
     --transpar: #0e031b1c;
+    --theme-pink: #d448f7;
     --theme-purple: #9027f1
 }
 
 *{
-    @apply text-[--theme-white];
+    @apply text-[--theme-white] font-roboto;
+}
+
+h1{
+    @apply font-extrabold text-3xl
+}
+
+h2{
+
 }
 
 /* width */
@@ -26,7 +35,7 @@ width: 10%;
   
 /* Handle */
 ::-webkit-scrollbar-thumb {
-background: linear-gradient(100deg, var(--theme-purple) 0%, #d448f7 70%);
+background: linear-gradient(100deg, var(--theme-purple) 0%, var(--theme-pink) 70%);
 border-radius: 30px;
 transition: 0.3s;
 }
@@ -40,5 +49,9 @@ transition: 0.3s;
 @layer components {
     .bg-main {
         @apply bg-[--theme-dark];
+    }
+    .profil{
+        @apply border-[5px] border-[--theme-purple] 
+        rounded-full overflow-clip h-fit w-fit mx-auto;
     }
 }

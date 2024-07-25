@@ -1,6 +1,10 @@
 
 const links = [
-    {name: }
+    {name: 'Profile', url: 'profile'},
+    {name: 'Projects', url: 'proj'},
+    {name: 'Skills', url: 'skill'},
+    {name: 'Certificates', url: 'certi'},
+    
 ]
 
 export default function Navbar(){
