@@ -2,15 +2,15 @@ import profil2 from '../../assets/img/profil2.jpg';
 
 export default function Intro() {
     return (
-        <div className="bg-black h-[calc(100vh-3.5rem)]">
+        <div className="bg-black h-[calc(100vh-var(--navh))]">
             <div className="container w-full h-full m-auto flex items-center justify-center">
                 <div className='w-fit h-fit m-auto space-y-5'>
                     <div className="profil">
-                        <img className='w-[180px]' src={profil2} alt="ProfPic" />
+                        <img className='' src={profil2} alt="ProfPic" />
                     </div>
                     <div className='block text-center space-y-4'>
                         <div>
-                            <p>Hello! i'm</p>
+                            <p className='font-semibold'>Hello! i'm</p>
                             <h1>Muhammad Farhan Roesfiazhar</h1>
                         </div>
                         <div>
@@ -19,8 +19,8 @@ export default function Intro() {
                             <p>Also have passion on digital drawing <s>and 3D modelling</s></p>
                         </div>
                     </div>
-                    <div>
-                        <svg></svg>
+                    <div className='w-full bg-gradient-to-r from-[--theme-pink] to-[--theme-purple] h-1.5 rounded-full'>
+                        
                     </div>
                 </div>
 

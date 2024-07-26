@@ -2,56 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
     --theme-dark: #0e031b;
     --theme-white: #dbdbdb;
-    --transpar: #0e031b1c;
     --theme-pink: #d448f7;
-    --theme-purple: #9027f1
+    --theme-purple: #9027f1;
+    --theme-grad: linear-gradient(100deg, var(--theme-purple) 0%, var(--theme-pink) 70%);
+    --navh: 3.5rem;
 }
 
-*{
+* {
     @apply text-[--theme-white] font-roboto;
 }
 
-h1{
-    @apply font-extrabold text-3xl
+h1 {
+    @apply font-extrabold text-3xl;
 }
 
-h2{
-
-}
+h2 {}
 
 /* width */
 ::-webkit-scrollbar {
     width: 8px;
-  }
-  
-  /* Track */
-::-webkit-scrollbar-track {
-background: black;
-width: 10%;
 }
-  
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(12, 4, 15);
+    width: 10%;
+}
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-background: linear-gradient(100deg, var(--theme-purple) 0%, var(--theme-pink) 70%);
-border-radius: 30px;
-transition: 0.3s;
+    background: linear-gradient(100deg, var(--theme-purple) 0%, var(--theme-pink) 70%);
+    border-radius: 30px;
+    transition: 0.3s;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(221, 120, 252);
-transition: 0.3s;
+    background: rgb(221, 120, 252);
+    transition: 0.3s;
 }
+
+/* Keyframes untuk animasi kilap */
+@keyframes shine-animation {
+    0%, 30% {
+      background-position: -50% 150;
+    }
+    70%, 100% {
+      background-position: 150% 0%;
+    }
+  }
 
 @layer components {
     .bg-main {
         @apply bg-[--theme-dark];
     }
-    .profil{
-        @apply border-[5px] border-[--theme-purple] 
-        rounded-full overflow-clip h-fit w-fit mx-auto;
+
+    .profil {
+        @apply relative rounded-full overflow-clip h-fit w-fit mx-auto bg-gradient-to-r from-[--theme-purple] from-20% via-[--theme-pink] via-50% to-[--theme-purple] to-80% p-[7px];
+        /* Resize the background for smooth animation */
+        transform: rotate(-135deg);
+        animation: shine-animation 2.5s linear infinite;
+        animation-delay: 3s;
+        background-size: 200% 100%;
+        background-position: -50%;
+    }
+
+    .profil img {
+        @apply h-[180px] w-[180px] rounded-full object-cover;
+        transform: rotate(135deg);
     }
 }

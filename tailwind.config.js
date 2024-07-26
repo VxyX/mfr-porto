@@ -10,6 +10,15 @@ export default {
           'roboto': ['Roboto', 'sans-serif'],   // Font kustom
           'playfair': ['Playfair Display', 'serif'], // Font kustom
       },
+      keyframes: {
+        'gradient-animation': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '100% 50%' },
+        },
+      },
+      animation: {
+        'gradient-animation': 'gradient-animation 1s linear infinite',
+      },
   },
   },
   plugins: [],
