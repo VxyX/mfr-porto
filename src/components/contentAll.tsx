@@ -5,7 +5,7 @@ import Navbar from "./nav";
 export default function ContentAll(){
     return (
         <>
-            <div className="bg-slate-950 w-full h-full">
+            <div className="bg-[--theme-dark] w-full h-full">
                 <Intro />
                 <Navbar />
                 <BodyContent />

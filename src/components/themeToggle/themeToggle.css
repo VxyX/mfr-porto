@@ -1,0 +1,74 @@
+.toggle-container {
+    /* for codepen */
+    transform: scale(1.5);
+    box-shadow: 9px 9px 54px #090b0f, -9px -9px 54px #11171f;
+    /**************/
+    width: 50px;
+    height: 20px;
+    background-color: var(--theme-dark);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+    transition: background 0.5s;
+    overflow: hidden;
+    .icon {
+      svg {
+        stroke: #fff;
+        stroke-width: 1.5px;
+        width: 16px;
+      }
+    }
+    .toggle-dark-icon {
+      margin-left: 12px;
+      margin-top: 1px;
+      svg {
+        transition: transform 0.9s;
+        transform: translateX(0px);
+      }
+    }
+    .toggle-light-icon {
+      margin-top: 2px;
+      svg {
+        transform-origin: center;
+        transform: scale(0.7) rotate(0deg);
+        position: relative;
+        right: 30px;
+        transition: transform 0.9s, right 0.5s;
+      }
+    }
+    .toggle-circle {
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      
+      left: 5%;
+      transition: left 0.5s;
+    }
+  }
+
+  #toggle-check {
+    display: none;
+    &:checked ~ .toggle-label .toggle-container {
+      background: #af71ff;
+      .toggle-circle {
+        left: 62%;
+      }
+      .toggle-light-icon {
+        svg {
+          transform: scale(1) rotate(180deg);
+          right: 0px;
+        }
+      }
+      .toggle-dark-icon {
+        svg {
+          transform: translateX(30px);
+        }
+      }
+    }
+  }
