@@ -13,6 +13,7 @@
 
 * {
     @apply text-[--theme-white] font-roboto;
+    transition: color 0.5s ease, background 0.5s ease;
 }
 
 h1 {
@@ -76,7 +77,7 @@ h2 {}
         @apply relative rounded-full overflow-clip h-fit w-fit mx-auto bg-gradient-to-r from-[--theme-purple] from-20% via-[--theme-pink] via-50% to-[--theme-purple] to-80% p-[7px];
         /* Resize the background for smooth animation */
         transform: rotate(-135deg);
-        animation: shine-animation 4s linear infinite;
+        animation: shine-animation 3s ease infinite;
         background-size: 200% 100%;
         background-position: -50%;
     }

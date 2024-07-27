@@ -1,4 +1,6 @@
 import profil2 from '../../assets/img/profil2.jpg';
+import ExternalLinks from '../../components/externalLinks';
+
 
 export default function Intro() {
     return (
@@ -21,6 +23,9 @@ export default function Intro() {
                     </div>
                     <div className='bg-gradient-purple w-full h-1.5 rounded-full'>
                         
+                    </div>
+                    <div className='w-fit m-auto'>
+                        <ExternalLinks />
                     </div>
                 </div>
 
