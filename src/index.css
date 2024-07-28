@@ -3,12 +3,17 @@
 @tailwind utilities;
 
 :root {
-    --theme-dark: #0b031b;
+    /* --theme-dark: #0b031b;
+    --theme-light: #dbdbdb;
+    --theme-black: #0b031b;
     --theme-white: #dbdbdb;
     --theme-pink: #d448f7;
-    --theme-purple: #9027f1;
+    --theme-purple: #9027f1; */
     --theme-grad: linear-gradient(100deg, var(--theme-purple) 0%, var(--theme-pink) 70%);
     --navh: 3.5rem;
+    --tes: rgb(41, 30, 59);
+    --tes2: #b6aec0a4;
+    --tes2: #d7d5d8;
 }
 
 * {
@@ -22,6 +27,7 @@ h1 {
 
 h2 {}
   
+
 
 /* width */
 ::-webkit-scrollbar {

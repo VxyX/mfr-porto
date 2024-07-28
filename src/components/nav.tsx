@@ -1,4 +1,4 @@
-import ThemeToggle from "./themeToggle/themeToggle"
+import ThemeToggle from "./ThemeToggle"
 
 const links = [
     { name: 'Profile', url: 'profile' },
@@ -11,7 +11,7 @@ const links = [
 export default function Navbar() {
     return (
         <>
-            <div className="bg-slate-800 w-full h-14 sticky z-10 top-0">
+            <div className="bg-[--theme-black] w-full h-14 sticky z-10 top-0 shadow-lg">
                 <div className="w-full h-full m-auto flex justify-center items-center">
                     <div className="flex w-full">
                         <div className="w-10 flex-1">

@@ -7,7 +7,7 @@ import Skills from "./sections/programmer/skills";
 export default function ProgrammerPage() {
     return (
         <>
-            <div className="bg-[--theme-dark]">
+            <div className="bg-[--theme-black]">
                 <Profile />
                 <Projects />
                 <Skills />

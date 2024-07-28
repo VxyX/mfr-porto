@@ -1,9 +1,34 @@
 // source code https://codepen.io/alireza82/pen/XWeabge
-import './themeToggle.css'
+import { useEffect } from 'react'
+import './themeToggle.scss'
+import setDarkMode from '../themeManager';
+import { useDispatch } from 'react-redux';
+import { toggleTheme } from '../../features/themeSlicer';
+import { useSelector } from 'react-redux';
+import { RootState, AppDispatch } from '../../store/store';
+
 export default function ThemeToggle() {
+
+    const dispatch: AppDispatch = useDispatch();
+    var isDarkMode = useSelector((state:RootState) => state.theme.isDarkMode)
+
+    useEffect(() => {
+        setDarkMode(isDarkMode);
+        setTimeout(() => {
+            document.body.classList.remove('no-color-transition');
+          }, 10000);
+    }, [dispatch]);
+
+    const handleTheme = () => {
+        isDarkMode = !isDarkMode;
+        dispatch(toggleTheme());
+        setDarkMode(isDarkMode);
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    }
+
     return (
         <div className='mr-5'>
-            <input type="checkbox" id="toggle-check" />
+            <input type="checkbox" id="toggle-check" checked={!isDarkMode} onChange={handleTheme}/>
             <label htmlFor="toggle-check" className="toggle-label">
                 <div className="toggle-container">
                     <div className="toggle-light-icon icon">
