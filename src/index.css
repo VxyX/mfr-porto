@@ -12,8 +12,9 @@
     --theme-grad: linear-gradient(100deg, var(--theme-purple) 0%, var(--theme-pink) 70%);
     --navh: 3.5rem;
     --tes: rgb(41, 30, 59);
-    --tes2: #b6aec0a4;
+    --tes2: #eb8fdb44;
     --tes2: #d7d5d8;
+    --ping: #d448f7;
 }
 
 * {
@@ -22,12 +23,16 @@
 }
 
 h1 {
-    @apply font-extrabold text-3xl;
+    @apply font-extrabold text-xl;
 }
 
 h2 {}
   
-
+@media (min-width:640px) {
+    h1 {
+        @apply font-extrabold text-3xl;
+    }
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -89,7 +94,14 @@ h2 {}
     }
 
     .profil img {
-        @apply h-[180px] w-[180px] rounded-full object-cover;
+        @apply h-[140px] w-[140px] rounded-full object-cover;
         transform: rotate(135deg);
+    }
+
+    @media (min-width:640px) {
+        .profil img {
+            @apply h-[180px] w-[180px] rounded-full object-cover;
+            transform: rotate(135deg);
+        }
     }
 }

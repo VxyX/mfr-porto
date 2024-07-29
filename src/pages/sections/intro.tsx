@@ -6,7 +6,7 @@ export default function Intro() {
     return (
         <div className="h-[calc(100vh-var(--navh))]">
             <div className="container w-full h-full m-auto flex items-center justify-center">
-                <div className='w-fit h-fit m-auto space-y-5'>
+                <div className='w-fit h-fit mx-5 sm:mx-auto my-auto space-y-5'>
                     <div className="profil">
                         <img className='' src={profil2} alt="ProfPic" />
                     </div>

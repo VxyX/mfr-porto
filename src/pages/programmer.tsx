@@ -1,6 +1,6 @@
 
 import Certificates from "./sections/programmer/certificates";
-import Profile from "./sections/programmer/profile";
+import Profile from "./sections/programmer/Profile";
 import Projects from "./sections/programmer/projects";
 import Skills from "./sections/programmer/skills";
 

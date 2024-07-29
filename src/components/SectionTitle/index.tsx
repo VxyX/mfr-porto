@@ -7,7 +7,7 @@ type prop = {
 
 const SectionTitle = ({ title = "None", align = 'center' }: prop) => {
     return (
-        <span className='sec-title'>
+        <span className='sec-title' data-aos="fade-down">
             <h1 className={`text-${align}`}>{title}</h1>
         </span>
     )
