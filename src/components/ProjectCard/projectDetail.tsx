@@ -4,13 +4,10 @@ interface InfoDetail {
     title?: string,
     description?: string,
     isShown: boolean,
-    objTransition?: objTransition,
     onUpdate: () => void;
 }
 
-type objTransition = { panel?: string, background?: string }
-
-const ProjectDetails = ({ img = '', title = '', description = '', isShown, objTransition = {}, onUpdate }: InfoDetail) => {
+const ProjectDetails = ({ img = '', title = '', description = '', isShown, onUpdate }: InfoDetail) => {
     const backgroundHideState:React.CSSProperties = {
         opacity: 0,
         visibility: 'hidden'
@@ -19,6 +16,7 @@ const ProjectDetails = ({ img = '', title = '', description = '', isShown, objTr
         opacity: 1,
         visibility: 'visible'
     }
+
     const panelHideState:React.CSSProperties = {
         opacity: 0,
         transform: 'translateY(-60%) scale(0)'
@@ -44,8 +42,9 @@ const ProjectDetails = ({ img = '', title = '', description = '', isShown, objTr
                     <span className='block bg-[--theme-white] w-full h-1 transform -rotate-45 absolute top-1/2' />
                 </div>
                 <div className="w-full h-full bg-[--theme-black] p-8 rounded-lg shadow-lg mx-auto">
-                    <h2 className="text-2xl font-bold mb-4">Detail</h2>
-                    <p>Informasi detail proyek atau konten tambahan di sini...</p>
+                    <img src={img} />
+                    <h2 className="text-2xl font-bold mb-4">{title}</h2>
+                    <p>{description}</p>
                     <button
                         className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
                     >
