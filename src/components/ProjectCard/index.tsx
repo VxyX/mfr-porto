@@ -12,7 +12,7 @@ interface ProjDetail{
 
 
 const ProjectCard = ({img=profile2, title='iniproject', shortDesc='', longDesc=''}:ProjDetail) => {
-    const [isPanelOpen, setIsPanelOpen] = useState(true);
+    const [isPanelOpen, setIsPanelOpen] = useState(false);
     
     useEffect(() => {
         if (isPanelOpen) {
