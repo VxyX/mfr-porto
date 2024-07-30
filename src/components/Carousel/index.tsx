@@ -1,9 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import './carousel.scss'
-import ProjectCard from '../ProjectCard';
-import ProjectDetails from '../ProjectCard/projectDetail';
-import React from 'react';
 
 interface Param {
     cards?: { card: JSX.Element }[],
