@@ -7,7 +7,7 @@ interface Param {
     handleClick?: () => void;
 }
 
-export default function Carousel({ cards, handleClick }: Param) {
+export default function Carousel({ cards }: Param) {
     return (
         <>
             <Swiper
@@ -23,7 +23,7 @@ export default function Carousel({ cards, handleClick }: Param) {
             >
                 {cards ? cards.map((card, index) => (
                     <>
-                        <SwiperSlide>
+                        <SwiperSlide key={index}>
                             {card.card}
                         </SwiperSlide>
                     </>
