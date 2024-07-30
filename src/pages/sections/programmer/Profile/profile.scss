@@ -57,7 +57,7 @@
 }
 
 .download-cv-btn {
-    @apply relative h-full w-[250px] text-center align-middle rounded-full font-bold bg-gradient-to-r from-0% from-[--theme-purple] via-45% via-[--theme-pink] to-90% to-[--theme-purple];
+    @apply relative overflow-hidden h-full w-[250px] text-center align-middle rounded-full font-bold bg-gradient-to-r from-0% from-[--theme-purple] via-45% via-[--theme-pink] to-90% to-[--theme-purple];
     color: #dbdbdb;
     background-size: 200% 200%;
     background-position: 80% 0%;

@@ -22,7 +22,7 @@
 }
 
 .proj-card-border {
-    @apply p-1 rounded-3xl;
+    @apply p-1 rounded-3xl w-fit;
     background-image: linear-gradient(-45deg, var(--theme-pink), var(--theme-purple), var(--theme-purple), var(--theme-pink));
 }
 
@@ -31,7 +31,7 @@
 }
 
 .detail-btn{
-    @apply py-2 px-5 rounded-full relative;
+    @apply py-2 px-5 rounded-full relative overflow-hidden;
     background-image: linear-gradient(to right, var(--theme-pink) 0%, var(--theme-purple) 70%);
 }
 

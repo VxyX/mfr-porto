@@ -1,35 +1,16 @@
-import { useEffect, useState } from 'react';
 import profile2 from '../../assets/img/profil2.jpg'
-import ProjectDetails from './projectDetail';
 import './projectCard.scss';
 
-interface ProjDetail{
+interface ProjDetail {
     img?: string,
     title?: string,
     shortDesc?: string,
-    longDesc?: string
+    btnEvent?: () => void
 }
 
 
-const ProjectCard = ({img=profile2, title='iniproject', shortDesc='', longDesc=''}:ProjDetail) => {
-    const [isPanelOpen, setIsPanelOpen] = useState(false);
+const ProjectCard = ({ img = profile2, title = 'iniproject', shortDesc = '', btnEvent }: ProjDetail) => {
     
-    useEffect(() => {
-        if (isPanelOpen) {
-            document.body.classList.add('overflow-hidden');
-        } else {
-            document.body.classList.remove('overflow-hidden');
-        }
-
-        return () => {
-            document.body.classList.remove('overflow-hidden');
-        };
-    }, [isPanelOpen]);
-
-    const showDetail = () => {
-        console.log('tes');
-        setIsPanelOpen(true);
-    }
 
     return (
         <>
@@ -49,7 +30,7 @@ const ProjectCard = ({img=profile2, title='iniproject', shortDesc='', longDesc='
                             <p className='text-center'>{shortDesc} </p>
                         </div>
                         <div className='flex-1 flex justify-center items-center'>
-                            <button className='detail-btn' onClick={showDetail}>
+                            <button className='detail-btn' onClick={btnEvent}>
                                 <p className='text-center'>
                                     Detail
                                 </p>
@@ -60,7 +41,6 @@ const ProjectCard = ({img=profile2, title='iniproject', shortDesc='', longDesc='
                 </div>
             </div>
 
-                <ProjectDetails img={img} title={title} description={longDesc} isShown={isPanelOpen} onUpdate={() => {setIsPanelOpen(false)}}/>
         </>
     )
 }

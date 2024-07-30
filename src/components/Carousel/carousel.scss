@@ -1,0 +1,15 @@
+.swiper-container {
+    overflow: visible;
+    /* Menampilkan bagian slide yang melampaui viewport */
+}
+
+.swiper-slide {
+    width: auto;
+    /* Agar slide dapat menyesuaikan lebarnya */
+    flex-shrink: 0;
+    /* Mencegah slide mengecil */
+}
+
+.custom-swiper{
+    @apply flex items-center justify-center;
+}
