@@ -7,7 +7,7 @@
 
     p {
         @apply font-medium text-center;
-        a{
+        .download-cv-btn{
             @apply mx-auto;
         }
     }
@@ -22,10 +22,10 @@
     }
 
     @media (min-width:768px) {
-        @apply flex-row pt-16;
+        @apply flex-row pt-0;
 
         #hanashi {
-            @apply w-2/3;
+            @apply w-3/5 pt-8;
             order: 1;
         }
 
@@ -35,27 +35,29 @@
 
         p{
             @apply text-left;
-            a{
-                @apply mx-0
+            
+            .download-cv-btn{
+                @apply mx-0;
             }
         }
     }
 
-    @media (min-width:1024) {
-        @apply space-x-5
-    }
 }
 
 .profile-container {
-    @apply px-10 pt-10;
+    @apply px-10 pt-10 pb-10;
 
     @media (min-width:768px) {
-        @apply px-16 py-7 pt-5;
+        @apply px-16 py-7 pt-12;
+    }
+
+    @media (min-width:1024px) {
+        @apply px-36;
     }
 }
 
 .download-cv-btn {
-    @apply relative h-full w-[250px] text-center align-middle py-2 rounded-full font-bold bg-gradient-to-r from-0% from-[--theme-purple] via-45% via-[--theme-pink] to-90% to-[--theme-purple];
+    @apply relative h-full w-[250px] text-center align-middle rounded-full font-bold bg-gradient-to-r from-0% from-[--theme-purple] via-45% via-[--theme-pink] to-90% to-[--theme-purple];
     color: #dbdbdb;
     background-size: 200% 200%;
     background-position: 80% 0%;
@@ -63,7 +65,7 @@
 
 .download-cv-btn::after {
     content: '';
-    @apply w-14 h-full rounded-full top-0 left-0 absolute bg-gradient-to-r from-transparent from-0% via-[#ffdafc23] via-50% to-100% to-transparent;
+    @apply w-full h-full rounded-full top-0 left-0 absolute bg-gradient-to-r from-transparent from-0% via-[#ffdafc23] via-10% to-20% to-transparent;
     animation: shine-animation-btn 3s ease infinite;
 }
 
@@ -81,17 +83,17 @@
         opacity: 0;
     }
 
-    30% {
+    35% {
         opacity: 1;
     }
 
-    70% {
+    50% {
         opacity: 0;
     }
 
     90%,
     100% {
-        transform: translate(250px) skew(-30deg);
+        transform: translate(110%) skew(-30deg);
         opacity: 0;
     }
 }

@@ -8,9 +8,9 @@ export default function Profile() {
     return (
         <div className="h-fit md:h-screen">
             <div className="h-full profile-container">
-                <div className="h-full pb-20 flex flex-col">
+                <div className="h-full flex flex-col">
                     <div className="pb-5">
-                        <SectionTitle title="About Me" align="right" />
+                        <SectionTitle title="About Me" align="left" />
                     </div>
                     <div className="profile-content flex justify-center items-center">
                         <div id="hanashi" className="block space-y-5">
@@ -21,22 +21,25 @@ export default function Profile() {
                             </p>
                             <p data-aos="fade-up">
                                 I'm quite confident with Python that i learned from my thesis,
-                                C# from game programming courses in 2021,
+                                C# from game programming with Unity,
                                 and JavaScript that i used a lot while learning web development including its library like ReactJs.
-                                Also this web that i build with React TypeScript.
-                                <br></br>
-                                i'm currently seeking oportunity to start my career as programmer :D
+                                This website also made with React TypeScript.
+                                <br/><br/>
+                                i'm currently seeking for oportunity to start my career as programmer :D
                             </p>
                             <p data-aos="fade-up">
                                 Thats all about me :D
                                 <br></br>
                                 You can download my latest CV here 👇
                                 <br></br>
-                                <a className="download-cv-btn mt-5 block"
-                                    href={CV_en}
-                                    download={'CV_EnglishFarhan'}>
-                                    Download CV
-                                </a>
+                                <span className="download-cv-btn mt-5 block">
+                                    <a className="block py-2 h-full w-full"
+                                        href={CV_en}
+                                        download={'CV_EnglishFarhan'}>
+                                        Download CV
+                                    </a>
+                                </span>
+
                             </p>
                         </div>
                         <div id="profpic" className="flex-1" data-aos="fade-up">

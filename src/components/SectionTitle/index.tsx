@@ -5,9 +5,9 @@ type prop = {
     align?: 'center' | 'left' | 'right'
 };
 
-const SectionTitle = ({ title = "None", align = 'center' }: prop) => {
+const SectionTitle = ({ title = "None", align = 'right' }: prop) => {
     return (
-        <span className='sec-title' data-aos="fade-down">
+        <span className={`sec-title ${align}`} data-aos="fade-down">
             <h1 className={`text-${align}`}>{title}</h1>
         </span>
     )

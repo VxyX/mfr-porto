@@ -1,0 +1,43 @@
+.proj-card {
+    @apply w-[280px] h-[380px] rounded-3xl p-3 transition-all duration-300 ease-in grid grid-rows-[1fr,1fr];
+    background-image: linear-gradient(to right, #372350 0%, #5e1c9c 50%, #372350 100%);
+    background-size: 100% 100%;
+    background-position: 50% 0%;
+
+    *{
+        @apply text-white;
+    }
+
+    @media (min-width:640px) {
+        @apply w-[320px] h-[400px];
+    }
+
+    @media (min-width:1024px) {
+        @apply w-[520px] h-[450px];
+    }
+}
+
+.proj-card:hover{
+    background-size: 200% 100%;
+}
+
+.proj-card-border {
+    @apply p-1 rounded-3xl;
+    background-image: linear-gradient(-45deg, var(--theme-pink), var(--theme-purple), var(--theme-purple), var(--theme-pink));
+}
+
+.proj-card-text {
+    @apply flex flex-col h-full;
+}
+
+.detail-btn{
+    @apply py-2 px-5 rounded-full relative;
+    background-image: linear-gradient(to right, var(--theme-pink) 0%, var(--theme-purple) 70%);
+}
+
+.detail-btn::after{
+    content: '';
+    @apply w-full h-full rounded-full top-0 left-0 absolute bg-gradient-to-r from-transparent from-0% via-[#ffdafc23] via-10% to-20% to-transparent;
+    background-size: 150% 100%;
+    animation: shine-animation-btn 3s ease infinite;
+}
