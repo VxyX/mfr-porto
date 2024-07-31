@@ -2,8 +2,8 @@ import GithubSvg from "../assets/svg/githubSvg";
 import LinkedinSvg from "../assets/svg/linkedinSvg";
 
 const platform = [
-    { name: 'LinkedIn', img: LinkedinSvg, url:'' },
-    { name: 'Github', img: GithubSvg, url:'' }
+    { name: 'LinkedIn', img: LinkedinSvg, url:'https://www.linkedin.com/in/m-farhan-r-a8140624b/' },
+    { name: 'Github', img: GithubSvg, url:'https://github.com/VxyX/mfr-porto' }
 ];
 
 export default function ExternalLinks() {
