@@ -42,9 +42,9 @@ export default function Carousel({ cards }: Param) {
                     loop
                     touchEventsTarget='container'
                     grabCursor
-                    speed={1500}
+                    speed={500}
                     autoplay={{
-                        delay: 3500, // Delay in ms // Continue autoplay after user interactions
+                        delay: 5000, // Delay in ms // Continue autoplay after user interactions
                     }}
                     className='custom-swiper flex-1'
                 >

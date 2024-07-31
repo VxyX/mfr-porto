@@ -24,8 +24,25 @@
 
 
 h2 {}
-  
 
+p {
+    font-size: calc(18px * 0.8);
+}
+
+pre {
+    font-size: calc(18px * 0.8);
+    @apply text-[--theme-white] font-roboto;
+    transition: color 0.5s ease;
+}
+
+@media (min-width:764px) {
+    pre {
+        @apply text-lg;
+    }
+    p {
+        @apply font-normal text-lg;
+    }
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -53,29 +70,34 @@ h2 {}
 
 /* Keyframes untuk animasi kilap */
 @keyframes shine-animation {
-    0%, 45% {
-      background-position: -50% 150;
-    }
-    55%, 100% {
-      background-position: 150% 0%;
-    }
-  }
 
-@layer base{
+    0%,
+    45% {
+        background-position: -50% 150;
+    }
+
+    55%,
+    100% {
+        background-position: 150% 0%;
+    }
+}
+
+@layer base {
     h1 {
         @apply font-extrabold text-xl;
 
     }
+
     @media (min-width:640px) {
         h1 {
-            
+
             @apply font-extrabold text-3xl;
         }
     }
 }
 
 @layer components {
-    
+
     .bg-main {
         @apply bg-[--theme-dark];
     }
@@ -86,6 +108,7 @@ h2 {}
         background-position: 0% 0%;
         transition: all 0.5s ease;
     }
+
     /* .bg-gradient-purple:hover{
         background-size: 250% 100%;
         background-position: 0% 0%

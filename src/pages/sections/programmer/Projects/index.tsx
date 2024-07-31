@@ -3,15 +3,9 @@ import Carousel from "../../../../components/Carousel";
 import ProjectCard from "../../../../components/ProjectCard";
 import ProjectDetails from "../../../../components/ProjectCard/projectDetail";
 import SectionTitle from "../../../../components/SectionTitle";
-import profpic2 from "../../../../assets/img/profil2.jpg";
+import DataProject from "../../../../assets/data/projectList";
 
-const dataProject = [
-    { title: 'Card 1', shortDesc: '', longDesc: '', img: profpic2 },
-    { title: 'Card 2', shortDesc: '', longDesc: '', img: profpic2 },
-    { title: 'Card 3', shortDesc: '', longDesc: '', img: profpic2 },
-    { title: 'Card 4', shortDesc: '', longDesc: '', img: profpic2 },
-    { title: 'Card 5', shortDesc: '', longDesc: '', img: profpic2 },
-]
+const dataProject = DataProject;
 
 
 export default function Projects() {
@@ -38,12 +32,12 @@ export default function Projects() {
     }
 
     const cards = dataProject.map((data, index) => ({
-        card: <ProjectCard key={index} title={data.title} btnEvent={()=>{showPanel(index)}}/>
+        card: <ProjectCard key={index} title={data.title} img={data.img} shortDesc={data.shortDesc} btnEvent={()=>{showPanel(index)}}/>
     }))
     
 
     return (
-        <div id="project" className="h-fit lg:h-screen">
+        <div id="project" className="h-screen min-h-[650px]">
             <div className="flex flex-col justify-center items-center h-full w-auto py-16">
                 <div className="w-full">
                     <SectionTitle title="Projects I've Done" align="center" />
@@ -52,7 +46,7 @@ export default function Projects() {
                     <Carousel cards={cards} />
                     {dataProject.map((data, index) => (
                         <>
-                            <ProjectDetails title={data.title} isShown={isPanelOpen[index]} onUpdate={() => { showPanel(index) }} />
+                            <ProjectDetails title={data.title} img={data.img} description={data.longDesc} isShown={isPanelOpen[index]} onUpdate={() => { showPanel(index) }} />
                         </>
                     ))}
 

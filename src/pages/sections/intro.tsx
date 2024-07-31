@@ -4,7 +4,7 @@ import ExternalLinks from '../../components/externalLinks';
 
 export default function Intro() {
     return (
-        <div className="h-full py-16">
+        <div className="h-[calc(100vh-var(--navh))] min-h-[500px]">
             <div className="container w-full h-full m-auto flex items-center justify-center">
                 <div className='w-fit h-fit mx-5 sm:mx-auto my-auto space-y-5'>
                     <div className="profil">

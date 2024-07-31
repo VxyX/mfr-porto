@@ -29,7 +29,7 @@ const ProjectCard = ({ img = profile2, title = 'iniproject', shortDesc = '', btn
                         <div>
                             <p className='text-center'>{shortDesc} </p>
                         </div>
-                        <div className='flex-1 flex justify-center items-center'>
+                        <div className='flex-1 flex justify-center items-end pb-3'>
                             <button className='detail-btn' onClick={btnEvent}>
                                 <p className='text-center'>
                                     Detail

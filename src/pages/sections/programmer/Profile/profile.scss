@@ -6,14 +6,14 @@
     }
 
     p {
-        @apply font-medium text-center;
+        @apply font-normal text-center;
         .download-cv-btn{
             @apply mx-auto;
         }
     }
 
     #hanashi {
-        @apply pt-16 w-full;
+        @apply pt-8 w-full;
         order: 2;
     }
 
