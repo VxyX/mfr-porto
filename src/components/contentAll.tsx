@@ -1,6 +1,6 @@
 import Intro from "../pages/sections/intro";
 import BodyContent from "./contentBody";
-import Navbar from "./nav";
+import Navbar from "./Navbar";
 
 export default function ContentAll(){
     return (

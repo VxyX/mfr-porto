@@ -6,7 +6,7 @@ import profil2 from "../../../../assets/img/profil2.jpg"
 export default function Profile() {
     const CV_en = CV_EN;
     return (
-        <div className="h-fit md:h-screen">
+        <div id="profile" className="h-fit lg:h-screen">
             <div className="h-full profile-container">
                 <div className="h-full flex flex-col">
                     <div className="pb-5">

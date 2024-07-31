@@ -9,6 +9,8 @@ const dataProject = [
     { title: 'Card 1', shortDesc: '', longDesc: '', img: profpic2 },
     { title: 'Card 2', shortDesc: '', longDesc: '', img: profpic2 },
     { title: 'Card 3', shortDesc: '', longDesc: '', img: profpic2 },
+    { title: 'Card 4', shortDesc: '', longDesc: '', img: profpic2 },
+    { title: 'Card 5', shortDesc: '', longDesc: '', img: profpic2 },
 ]
 
 
@@ -41,12 +43,12 @@ export default function Projects() {
     
 
     return (
-        <div className="h-screen">
-            <div className="flex flex-col justify-center items-center h-full w-auto">
+        <div id="project" className="h-fit lg:h-screen">
+            <div className="flex flex-col justify-center items-center h-full w-auto py-16">
                 <div className="w-full">
                     <SectionTitle title="Projects I've Done" align="center" />
                 </div>
-                <div className="pt-10 w-4/5 mx-auto">
+                <div className="pt-10 w-[95%] sm:w-[90%] lg:w-[950px] mx-auto">
                     <Carousel cards={cards} />
                     {dataProject.map((data, index) => (
                         <>

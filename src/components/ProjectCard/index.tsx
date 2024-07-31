@@ -18,7 +18,7 @@ const ProjectCard = ({ img = profile2, title = 'iniproject', shortDesc = '', btn
                 <div className="proj-card space-y-3">
                     <div className='w-[95%] m-auto'>
                         <div className='w-full pb-[56.25%] relative'>
-                            <img className='w-full h-full rounded-3xl object-cover absolute top-0 left-0' src={img} />
+                            <img className='w-full h-full rounded-3xl object-cover absolute top-0 left-0' src={img} loading='lazy'/>
                         </div>
                     </div>
 

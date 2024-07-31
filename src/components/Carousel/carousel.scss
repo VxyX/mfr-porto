@@ -1,15 +1,103 @@
 .swiper-container {
+    width: 100%;
+    height: 100%;
     overflow: visible;
+    
     /* Menampilkan bagian slide yang melampaui viewport */
 }
 
 .swiper-slide {
     width: auto;
     /* Agar slide dapat menyesuaikan lebarnya */
-    flex-shrink: 0;
     /* Mencegah slide mengecil */
 }
 
-.custom-swiper{
-    @apply flex items-center justify-center;
+.custom-swiper {
+    position: relative;
 }
+
+.custom-swiper::before,
+.custom-swiper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;
+    /* Adjust width to control the gradient effect */
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+
+    @media (min-width:640px) {
+        width: 100px;
+    }
+
+    @media (min-width:764px) {
+        width: 200px;
+    }
+}
+
+.custom-swiper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--theme-black), rgba(255, 255, 255, 0));
+    
+}
+
+.custom-swiper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--theme-black), rgba(255, 255, 255, 0));
+}
+
+.swiper-prev-btn,.swiper-next-btn{
+    @apply relative w-5 h-5 cursor-pointer transition-all duration-300;
+
+    @media (min-width:640px) {
+        @apply w-10 h-10;
+    }
+    
+}
+
+.swiper-prev-btn::before,.swiper-prev-btn::after{
+    content: '';
+    @apply h-1 w-4/5 absolute z-[2] -left-1/2;
+    background-image: linear-gradient(to right, var(--theme-pink), var(--theme-purple));
+}
+
+.swiper-prev-btn::before{
+    @apply  top-[48%];
+    transform: rotate(-45deg) translateX(50%);
+}
+
+.swiper-prev-btn::after{
+    @apply bottom-[48%];
+    transform: rotate(45deg) translateX(50%);
+}
+
+.swiper-next-btn::before,.swiper-next-btn::after{
+    content: '';
+    @apply h-1 w-4/5 absolute z-[2] -right-1/2;
+    background-image: linear-gradient(to left, var(--theme-pink), var(--theme-purple));
+}
+
+.swiper-next-btn::before{
+    @apply  top-[48%];
+    transform: rotate(45deg) translateX(-50%);
+}
+
+.swiper-next-btn::after{
+    @apply bottom-[48%];
+    transform: rotate(-45deg) translateX(-50%);
+}
+// .swiper-button-next-custom, .swiper-button-prev-custom {
+//     position: absolute;
+//     top: 50%; /* Atur sesuai kebutuhan */
+//     transform: translateY(-50%); /* Center secara vertikal */
+//     z-index: 10; /* Pastikan tombol berada di atas elemen lain */
+// }
+
+// .swiper-button-next-custom {
+//     right: -5rem; /* Menempatkan tombol di luar kontainer */
+// }
+
+// .swiper-button-prev-custom {
+//     left: -5rem; /* Menempatkan tombol di luar kontainer */
+// }
