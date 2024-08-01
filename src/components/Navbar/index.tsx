@@ -27,11 +27,11 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="bg-[--theme-black] w-full h-14 sticky z-10 top-0 shadow-lg">
-                <div className="w-[95%] h-full m-auto flex justify-center items-center">
-                    <div className="flex w-full h-full">
+            <div className={`nav-bar z-10 top-0 ${sideBarActive ? 'max-h-screen' : ''}`}>
+                <div className="w-[95%] h-full m-auto flex flex-col justify-center items-center">
+                    <div className={`flex flex-1 w-full h-full py-2`}>
                         <div className="flex-1 flex items-center md:invisible">
-                            <div className="w-10 h-10 flex justify-center items-center ml-3 sm:ml-5">
+                            <div className="w-7 h-7 sm:w-10 sm:h-10 flex justify-center items-center ml-3 sm:ml-5">
                                 <div className={`side-bar-toggle ${sideBarActive ? 'side-bar-toggle-active' : ''}`} onClick={() => setSideBarActive(!sideBarActive)}>
                                     <span className="line-1" />
                                     <span className="line-2" />
@@ -42,7 +42,7 @@ export default function Navbar() {
                         </div>
                         <div className="sm:flex space-x-5 hidden sm:invisible md:visible items-center">
                             {links.map((link, index) => (
-                                <li className="list-none cursor-pointer" key={index}>
+                                <li className="nav-item list-none cursor-pointer" key={index}>
                                     <a onClick={() => scrollTo(link.url)}>{link.name}</a>
                                 </li>
                             ))}
@@ -54,19 +54,23 @@ export default function Navbar() {
 
                         </div>
                     </div>
+                    <div className={`main-content-container ${sideBarActive ? 'scale-100 max-h-screen' : ''}`}>
+
+                        <div className={`side-bar-content w-screen h-fit ${sideBarActive ? 'show-side-bar-content' : ''}`}>
+                            {links.map((link, index) => (
+                                <li className="nav-item list-none cursor-pointer" key={index}>
+                                    <a className="w-full block pl-8" onClick={() => { scrollTo(link.url); setSideBarActive(false) }}>{link.name}</a>
+                                </li>
+                            ))}
+                        </div>
+                    </div>
 
                 </div>
+                
 
             </div>
             <div className={`side-bar-bg fixed bg-[#222222af] w-screen h-screen inset-0 z-[9] ${sideBarActive ? 'show-side-bar-bg' : ''}`} onClick={() => setSideBarActive(false)}>
-            </div>
-            <div className={`side-bar-content fixed w-screen h-fit z-[9] ${sideBarActive ? 'show-side-bar-content' : ''}`}>
-                {links.map((link, index) => (
-                    <li className="list-none cursor-pointer" key={index}>
-                        <a className="w-full block pl-8" onClick={() => {scrollTo(link.url); setSideBarActive(false)}}>{link.name}</a>
-                    </li>
-                ))}
-            </div>
+                </div>
         </>
     )
 }

@@ -1,60 +1,98 @@
-.side-bar-toggle{
+.nav-bar {
+    @apply transition-all duration-300 overflow-hidden w-full max-h-[3.5rem] h-auto bg-[--theme-black] sticky shadow-lg;
+}
+
+.side-bar-toggle {
     @apply h-full w-full flex flex-col relative;
 
-    span{
-        @apply bg-white absolute h-0.5 w-full my-auto transition-all duration-500;
+    span {
+        @apply bg-[--theme-white] absolute h-0.5 w-full my-auto transition-all duration-500;
     }
 
-    span.line-1{
+    span.line-1 {
         @apply top-1;
     }
 
-    span.line-2{
-        @apply top-1/2;
+    span.line-2 {
+        @apply top-1/2 bottom-1/2;
     }
 
-    span.line-3{
+    span.line-3 {
         @apply bottom-1;
     }
 }
 
-.side-bar-toggle-active{
-    span.line-1{
-        @apply top-1/2;
+.side-bar-toggle-active {
+    span.line-1 {
+        @apply top-1/2 bottom-1/2;
         transform: rotate(405deg);
     }
-    span.line-2{
+
+    span.line-2 {
         @apply opacity-0;
         transform: rotate(360deg);
     }
-    span.line-3{
-        @apply bottom-1/2;
+
+    span.line-3 {
+        @apply top-1/2 bottom-1/2;
         transform: rotate(-405deg);
     }
 }
 
-.side-bar-bg,.side-bar-content{
+.side-bar-bg,
+.side-bar-content {
     @apply invisible transition-all duration-300;
 }
 
-.side-bar-bg{
+.side-bar-bg {
     @apply opacity-0;
 }
 
-.show-side-bar-bg,.show-side-bar-content{
+.show-side-bar-bg,
+.show-side-bar-content {
     @apply visible;
 }
 
-.show-side-bar-bg{
+.show-side-bar-bg {
     @apply opacity-100;
 }
 
-.side-bar-content{
-    @apply bg-[--theme-black] -top-1/2 -left-1/2 pt-[calc(var(--navh)+1rem)]  pb-5 space-y-5;
+.side-bar-content {
+    @apply pt-3 pb-5 space-y-5 max-h-0;
     transform: scale(0) translate3d(-50%, -50%, 0);
 }
 
-.show-side-bar-content{
-    @apply -top-0 -left-0;
+.show-side-bar-content {
+    max-height: 500px;
     transform: scale(1) translate3d(0, 0, 0);
+}
+
+.nav-head {
+    @apply transition-all duration-300 h-auto transform;
+    max-height: 500px;
+}
+
+.nav-head-hide {
+    @apply overflow-hidden scale-0;
+}
+
+.main-content-container {
+    @apply max-h-0 scale-0 transition-all duration-300;
+}
+
+.nav-item a {
+    @apply font-medium text-xl rounded-xl transition-all duration-300 ease-linear md:px-3 lg:px-5;
+    background: linear-gradient(135deg, var(--theme-pink), var(--theme-purple), var(--theme-white) 50%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    /* Gunakan latar belakang untuk teks (Safari/Chrome) */
+    -webkit-text-fill-color: transparent;
+    /* Isi teks transparan (Safari/Chrome) */
+    background-clip: text;
+    /* Gunakan latar belakang untuk teks (Firefox) */
+    background-position: 75% 100%;
+}
+
+.nav-item a:hover {
+    background-position: 0% 0%;
 }

@@ -5,10 +5,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/scss/autoplay'
 import './carousel.scss'
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay, Zoom } from 'swiper/modules';
 import { useCallback, useState } from 'react';
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+SwiperCore.use([Navigation, Pagination, Autoplay, Zoom]);
 
 interface Param {
     cards?: { card: JSX.Element }[],
@@ -43,8 +43,10 @@ export default function Carousel({ cards }: Param) {
                     touchEventsTarget='container'
                     grabCursor
                     speed={500}
+                    zoom={{containerClass: 'zoom-container'}}
                     autoplay={{
-                        delay: 5000, // Delay in ms // Continue autoplay after user interactions
+                        delay: 5000, 
+                        disableOnInteraction: true,
                     }}
                     className='custom-swiper flex-1'
                 >

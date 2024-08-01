@@ -35,6 +35,22 @@ pre {
     transition: color 0.5s ease;
 }
 
+.text-highlight {
+    color: var(--theme-pink);
+    font-weight: 500;
+}
+
+.text-highlight-styled {
+    background: linear-gradient(to right, var(--theme-pink)30%, var(--theme-purple), var(--theme-pink) 70%);
+    font-weight: 500;
+    -webkit-background-clip: text; /* Gunakan latar belakang untuk teks (Safari/Chrome) */
+    -webkit-text-fill-color: transparent; /* Isi teks transparan (Safari/Chrome) */
+    background-clip: text; /* Gunakan latar belakang untuk teks (Firefox) */
+    background-size: 150% 100%;
+    background-position: 0% 0%;
+    animation: text-shine-animation 1s linear infinite;
+}
+
 @media (min-width:764px) {
     pre {
         @apply text-lg;
@@ -79,6 +95,17 @@ pre {
     55%,
     100% {
         background-position: 150% 0%;
+    }
+}
+
+@keyframes text-shine-animation {
+
+    0% {
+        background-position: 150% 0%;
+    }
+
+    100% {
+        background-position: -150% 0%;
     }
 }
 

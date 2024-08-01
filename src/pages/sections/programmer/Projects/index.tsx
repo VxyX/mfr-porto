@@ -38,7 +38,7 @@ export default function Projects() {
 
     return (
         <div id="project" className="h-screen min-h-[650px]">
-            <div className="flex flex-col justify-center items-center h-full w-auto py-16">
+            <div className="flex flex-col justify-center items-center h-full w-auto py-10">
                 <div className="w-full">
                     <SectionTitle title="Projects I've Done" align="center" />
                 </div>

@@ -10,6 +10,8 @@ const colorVar = [
     { name: "theme-white", dark: "#dbdbdb", light: "#291e3b" },
     { name: "theme-pink", dark: "#d448f7", light: "#d448f7" },
     { name: "theme-purple", dark: "#9027f1", light: "#9027f1" },
+    { name: "theme-card", dark: "#8736a7", light: "#d9d0e7" },
+    { name: "theme-card-shadow", dark: "#372350cc", light: "#dbc7eeab" },
 ]
 
 
