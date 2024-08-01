@@ -7,7 +7,7 @@ const DataProject = [
         longDesc: `
 <span class="text-highlight">Kenyuu OCR</span> 研遊 (けんゆう) - Kenyuu: 研 (study, research) + 遊 (play), is OCR Application that are made specifically for extracting Japanese Text from image, translate it to Indonesia/English. This also provided with words dictionary look-up, and show other details if the word is conjugated. This feature is designed for Japanese Learner that want to use this App while playing Japanese Games. This thesis was completed in <span class="text-highlight">March 2024</span>.
         
-This project is built with <span class="text-highlight-styled">Python3</span>, and <span class="text-highlight-styled">Qt</span> Framework for the core.
+This project was built with <span class="text-highlight-styled">Python3</span>, and <span class="text-highlight-styled">Qt</span> Framework for the core.
 Other tech included are <span class="text-highlight-styled">Tesseract OCR</span>, <span class="text-highlight-styled">MeCab</span> (Japaneses Parser), <span class="text-highlight-styled">jisho.org API</span>, and <span class="text-highlight-styled">translator API</span>. This also use <span class="text-highlight-styled">HTML</span> and <span class="text-highlight-styled">JavaScript</span> for QtWebEngine (mainly used for writing furigana text with &lt;ruby&gt;), and also <span class="text-highlight-styled">SQLite</span> for word data bookmark management`, 
         img: OcrJp 
     },

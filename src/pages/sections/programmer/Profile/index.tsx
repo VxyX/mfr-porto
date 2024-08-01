@@ -20,8 +20,8 @@ export default function Profile() {
                                 Hey, atleast i've learned somethings from college, or random internet tutorial... i think...
                             </p>
                             <p data-aos="fade-up">
-                                On my journey to become a programmer, i've learned various programming language such as Python, C#, JavaScript, TypeScript, and also some Library/Framework like ReactJs, and .Net... (<i>This porto web also build with React Typescript :D</i>)
-                                I'm currently seeking for oportunity to start my career as programmer :D
+                                On my journey, i've learned various programming language such as Python, C#, JavaScript, TypeScript, and also some Library/Framework like ReactJs, and .Net... (<i>This porto web also build with React Typescript :D</i>)
+                                I'm currently seeking for oportunity to start my career and improve my capability as programmer :D
                             </p>
                             <p data-aos="fade-up">
                                 Thats all about me :D
