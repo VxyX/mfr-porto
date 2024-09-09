@@ -1,10 +1,10 @@
 import SectionTitle from "../../../../components/SectionTitle";
-import CV_EN from "../../../../assets/cv/CV_ATS_FarhanEnglish.pdf"
+// import CV_EN from "../../../../assets/cv/CV_ATS_FarhanEnglish.pdf"
 import "./profile.scss"
 import profil2 from "../../../../assets/img/profil2.jpg"
 
 export default function Profile() {
-    const CV_en = CV_EN;
+    // const CV_en = CV_EN;
     return (
         <div id="profile" className="h-fit sm:h-screen min-h-[700px]">
             <div className="h-full profile-container">
@@ -30,7 +30,7 @@ export default function Profile() {
                                 <br></br>
                                 <span className="download-cv-btn mt-5 block">
                                     <a className="block py-2 h-full w-full"
-                                        href={CV_en}
+                                        href="https://drive.usercontent.google.com/uc?id=165x0DSx-fhWRHE7PvryOu2jpvN3-IhbW&export=download"
                                         download={'CV_EnglishFarhan'}>
                                         Download CV
                                     </a>
